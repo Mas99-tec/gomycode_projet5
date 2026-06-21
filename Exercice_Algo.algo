@@ -1,0 +1,76 @@
+ALGORITHM Selection_IF-ELSE-IF
+VAR
+    n : INTEGER 
+    mention : STRING
+BEGIN
+    IF n < 10   THEN
+        mention := "Ajourné"
+    ELSE_IF 10 ≤ n < 12  THEN
+        mention := "Passable"
+    ELSE_IF 12 ≤ n < 14 THEN
+        mention := "Assez Bien"
+    ELSE_IF 14 ≤ n < 16 THEN
+        mention := "Bien"
+    ELSE  
+        mention := "Très Bien"
+    END_IF
+
+    AFFICHER ("La mention est : ")
+    AFFICHER (mention)
+END
+
+ALGORITHM Selection_SWITCH-CASE
+VAR
+    jour : INTEGER 
+BEGIN
+    SWITCH (jour) DO
+        CASE 1:
+            AFFICHER ("Jour ouvré")
+            BREAK
+        CASE 2:
+            AFFICHER ("Jour ouvré")
+            BREAK
+        CASE 3:
+            AFFICHER ("Jour ouvré")
+            BREAK
+        CASE 4:
+            AFFICHER ("Jour ouvré")
+            BREAK
+        CASE 5:
+            AFFICHER ("Jour ouvré")
+            BREAK
+        CASE 6:
+            AFFICHER ("Weekend")
+            BREAK
+        CASE 7:
+            AFFICHER ("Weekend")
+            BREAK
+      default:
+            AFFICHER ("Numéro invalide")
+    END_SWITCH
+END  
+
+// Quant tu oublie BREAK dans le cas jour = 5, 
+// le programme continuera à exécuter le cas suivant (cas 6). Donc on aura :
+// Jour ouvré 
+// Week end
+
+
+
+//Itération (FOR, WHILE, REPEAT-UNTIL)
+//1. FOR — Affiche la table de multiplication d'un nombre m (de m×1 à m×10).
+
+ALGORITHM (FOR)
+VAR 
+   m : INTEGER
+   i : INTEGER
+   resultat : INTEGER
+BEGIN
+    FOR i FROM 1 TO 10 DO
+        resultat := m * i
+        AFFICHER (resultat)
+    END_FOR
+END
+
+// 2. WHILE - On donne un entier n. Calcule la somme de ses chiffres ex :  
+// n = 472 → 4 + 7 + 2 = 13
