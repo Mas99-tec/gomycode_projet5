@@ -74,3 +74,33 @@ END
 
 // 2. WHILE - On donne un entier n. Calcule la somme de ses chiffres ex :  
 // n = 472 → 4 + 7 + 2 = 13
+
+ALGORITHM (WHILE)
+VAR 
+   n : INTEGER
+   somme : INTEGER
+   m : INTEGER
+BIGIN 
+    somme := 0
+    WHILE n > 10 DO
+        m := n % 10 
+        somme := m + somme
+        n := n / 10
+    END_WHILE
+    somme := somme + n
+    AFFICHER(somme)
+END
+
+//  3 REPEAT-UNTIL — Demande à l'utilisateur de saisir un mot de passe numérique, et répète la demande tant que le nombre saisi n'a pas exactement 4 chiffres (entre 1000 et 9999).
+
+ALGORITHM (REPEAT-UNTIL)
+VAR 
+   n : INTEGER
+BEGIN  
+   REPEAT
+   LIRE (n)
+    
+   UNTIL (n > 999 AND
+         n < 10000)
+   Ecrire (n)
+END
